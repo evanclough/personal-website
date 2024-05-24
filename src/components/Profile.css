@@ -1,0 +1,13 @@
+.lnk-btn {
+    background-color: #333 !important;
+    border: #ddd !important;
+}
+
+.lnk-btn:hover, .lnk-btn:active, .lnk-btn:focus {
+    background-color: #666 !important;
+    border: #ddd !important;
+}
+
+.lnk-spn {
+    margin-right: 0.5rem;
+}
