@@ -46,23 +46,20 @@ function Projects(){
     ]
 
     return (
-        <div className="mx-5 mt-3 proj-container">
-            <Row xs={1} md={3} className="g-4 mt-1">
+        <div className="mx-auto proj-container">
+            <Row xs={1} md={3} className="g-4 mb-2">
             {projects.map((project, idx) => (
-                <Col key={idx}>
-                <Card bg="dark" className="proj-card pt-2">
-                    <Card.Header>
-                        <p><b>{project.name}</b></p>
-                        <div>
-                            {project.links.map((lnk, idx) => (
-                                <span className="lnk-spn"><a href={lnk.url} className><Button className="lnk-btn">{lnk.name} <ArrowUpRight size={18}/> </Button></a></span>
-                            ))}
-                        </div>
-                    </Card.Header>
+                <Col key={idx} className="w-100">
+                <Card bg="dark" className="proj-card pt-1 mx-auto">
                     <Card.Body>
-                        <Card.Text>
-                            {project.description}
-                        </Card.Text>
+                        <h3>{project.name}</h3>
+                            <div>
+                                {project.links.map((lnk, idx) => (
+                                    <span className="lnk-spn"><a href={lnk.url} className><Button className="lnk-btn">{lnk.name} <ArrowUpRight size={18}/> </Button></a></span>
+                                ))}
+                            </div>
+                        <hr/>
+                        {project.description}
                     </Card.Body>
                 </Card>
                 </Col>

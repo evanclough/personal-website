@@ -9,12 +9,20 @@ a:hover {
 }
 
 .proj-card {
-    color: "eee" !important;
+    color: #ddd !important;
     text-align: left;
+    width: 50%
 }
 
+@media (max-width: 767px) {
+    .proj-card {
+        color: #ddd !important;
+        text-align: left;
+        width: 90%
+    }
+  }
 .proj-container {
-    background-color: black !important;
+    width: 100% !important;
 }
 
 .lnk-btn {

@@ -11,3 +11,17 @@
 .lnk-spn {
     margin-right: 0.5rem;
 }
+
+.prof-card {
+    color: #ddd !important;
+    text-align: left;
+    width: 50%
+}
+
+@media (max-width: 767px) {
+    .prof-card {
+        color: #ddd !important;
+        text-align: left;
+        width: 90%
+    }
+  }

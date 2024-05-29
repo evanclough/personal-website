@@ -3,24 +3,35 @@ import Header from './components/Header';
 import Profile from './components/Profile';
 import Projects from './components/Projects';
 
-import Tab from 'react-bootstrap/Tab';
-import Tabs from 'react-bootstrap/Tabs';
+import Button from 'react-bootstrap/Button';
+import ButtonGroup from 'react-bootstrap/ButtonGroup';
+
+import { useState } from 'react';
+import { render } from '@testing-library/react';
 
 function App() {
+  const [activeTab, setActiveTab] = useState("profile");
+
+  function renderActive(){
+    switch(activeTab){
+      case "profile":
+        return <Profile/>
+      case "projects":
+        return <Projects/>
+      default:
+        return <Profile/>
+    }
+  }
+
   return (
     <div className="App">
-      <Header/>
-      <Tabs
-        defaultActiveKey="profile"
-        className="mb-3"
-      >
-        <Tab eventKey="profile" title="Profile">
-          <Profile/>
-        </Tab>
-        <Tab eventKey="projects" title="Projects" className='app-tab'>
-          <Projects/>
-        </Tab>
-      </Tabs>
+      <div className=' mt-2 mb-4 nav-btngrp'>
+        <ButtonGroup className = " mx-auto mb-2 ">
+          <Button  onClick = {e => setActiveTab("profile")} className={activeTab === "profile" ? "active-nav-btn" : "inactive-nav-btn"}> Profile</Button>
+          <Button onClick = {e => setActiveTab("projects")} className={activeTab === "projects" ? "active-nav-btn" : "inactive-nav-btn"}> Projects</Button>
+        </ButtonGroup>
+      </div>
+      {renderActive()}
     </div>
   );
 }

@@ -3,7 +3,7 @@ body {
 }
 body, p, h1, h2, h3, h4, h5, h6, span, div, /* Add more elements as needed */
 a, tr, td, th, button, input, textarea {
-  color: #ddd; /* white color */
+  color: #ddd !important; /* white color */
 }
 
 .nav-tabs {
@@ -40,4 +40,21 @@ a, tr, td, th, button, input, textarea {
 
 ::-webkit-scrollbar-button {
   display: none !important;
+}
+
+.nav-btngrp {
+  border-bottom: 1px solid white;
+}
+.active-nav-btn {
+  background-color: #666 !important;
+  border: none !important;
+}
+
+.inactive-nav-btn {
+  background-color: #333  !important;
+  border: none !important;
+}
+
+.inactive-nav-btn:hover {
+  background-color: #666 !important;
 }
